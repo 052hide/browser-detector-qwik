@@ -43,7 +43,6 @@ export const TopPage = component$(() => {
     <div>
       <p class={'tw-text-neutral-800 tw-font-bold'}>使用環境</p>
       <div class={clsx('tw-mt-4')}>
-        {JSON.stringify(store.screenSize || {})}
         <ul
           class={clsx('tw-grid tw-grid-cols-1 lg:tw-grid-cols-2', 'tw-gap-4')}
         >
