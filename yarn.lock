@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@builder.io/qwik-city@0.0.124":
-  version "0.0.124"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik-city/-/qwik-city-0.0.124.tgz#6b66d681df7258bcbcb8db6b4402165527a2a323"
-  integrity sha512-i6EPFQhOH9XT7GTf35ysLEWQo1KZQEWxM0F81oxCfgqfR28onuv6YGzlfMqzh5LCp42tJihMz7Wy9lfVEql3OQ==
+"@builder.io/qwik-city@0.0.125":
+  version "0.0.125"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik-city/-/qwik-city-0.0.125.tgz#2e4a566781dac8f89faa70287ed57d27d49ec483"
+  integrity sha512-8B7vd3CTmKkyK3twNSSm24EF/P3vSmb9DRKXz3NuuMxNxkNAQNR0z9Og7i2Uyar/o6Iwlb3pv0NsjuVrN5RvQw==
   dependencies:
     "@mdx-js/mdx" "2.1.5"
     "@playwright/test" "1.28.0"
