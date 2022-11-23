@@ -22,7 +22,7 @@ export default component$(() => {
     <QwikCityProvider>
       <head>
         <meta charSet="utf-8" />
-        <QwikPartytown forward={['dataLayer.push']} />;
+        <QwikPartytown forward={['dataLayer.push']} />
         {import.meta.env.VITE_CLOUDFLARE_BEACON && (
           <script
             async
