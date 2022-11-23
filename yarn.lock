@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@builder.io/partytown@^0.7.0":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.2.tgz#012d0dc5458af07079849f09567fcbf058a72d46"
+  integrity sha512-TmRHuN4gdsOJxBGsPPirJAMuXDm0o9cx9t5ltSson+F+K5ES3eNiBCxBGvSSkoEARvZ+kl1n7WVi+8qNyJdeAQ==
+
 "@builder.io/qwik-city@0.0.125":
   version "0.0.125"
   resolved "https://registry.yarnpkg.com/@builder.io/qwik-city/-/qwik-city-0.0.125.tgz#2e4a566781dac8f89faa70287ed57d27d49ec483"
