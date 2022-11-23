@@ -70,6 +70,20 @@ export const TopPage = component$(() => {
           )}
         </ul>
       </div>
+      <div class={clsx('tw-mt-8')}>
+        <a
+          href={'https://github.com/052hide/browser-detector-qwik'}
+          target="_blank"
+          rel="noreferrer"
+          class={clsx(
+            'tw-underline',
+            'tw-text-xs tw-text-neutral-800',
+            'hover:tw-opacity-60 tw-transition tw-duration-300'
+          )}
+        >
+          GitHub
+        </a>
+      </div>
     </div>
   )
 })
