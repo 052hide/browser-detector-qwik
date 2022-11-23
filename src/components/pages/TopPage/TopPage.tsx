@@ -7,6 +7,7 @@ import { CardText } from './CardText'
 export const TopPage = component$(() => {
   const store = useStore<{
     userAgent?: Parser.ParsedResult
+    screenSize?: { x: number; y: number }
   }>({ userAgent: undefined })
 
   useOnWindow(
@@ -20,6 +21,21 @@ export const TopPage = component$(() => {
         platform: browser.getPlatform(),
         engine: browser.getEngine(),
       }
+
+      store.screenSize = {
+        x: window.innerWidth,
+        y: window.innerHeight,
+      }
+    })
+  )
+
+  useOnWindow(
+    'resize',
+    $(() => {
+      store.screenSize = {
+        x: window.innerWidth,
+        y: window.innerHeight,
+      }
     })
   )
 
@@ -27,6 +43,7 @@ export const TopPage = component$(() => {
     <div>
       <p class={'tw-text-neutral-800 tw-font-bold'}>使用環境</p>
       <div class={clsx('tw-mt-4')}>
+        {JSON.stringify(store.screenSize || {})}
         <ul
           class={clsx('tw-grid tw-grid-cols-1 lg:tw-grid-cols-2', 'tw-gap-4')}
         >
@@ -67,6 +84,15 @@ export const TopPage = component$(() => {
                 </Card>
               </li>
             </>
+          )}
+          {store.screenSize && (
+            <li>
+              <Card title={'スクリーンサイズ'}>
+                <CardText>
+                  {`${store.screenSize.x} x ${store.screenSize.y}`}
+                </CardText>
+              </Card>
+            </li>
           )}
         </ul>
       </div>
