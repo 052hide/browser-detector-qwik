@@ -17,10 +17,10 @@
     source-map "0.7.4"
     vfile "5.3.6"
 
-"@builder.io/qwik@0.14.0":
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-0.14.0.tgz#3c885baddbe2fecd9ae5b9117fbe25e3b406e74e"
-  integrity sha512-l5FCgtkqaHJkBZQujsTAtp5NDqG4bGIblxYq5d7Bsk16XFFS8zOkHxy9UcfYiKYeIQ0irFMX3RE9zByDog/tkA==
+"@builder.io/qwik@0.14.1":
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-0.14.1.tgz#b82d097d73a77ad8cca3298abbbc6d4ca59d4be5"
+  integrity sha512-bHAWSK2kaJ8VxYsR85/0cj/dbzp2dfzjWZDWoH8gKy2PZw+PYGh+vIsQE0H+Xu3WIkwkkyi8PdWA1H/Qp9MSng==
 
 "@cloudflare/kv-asset-handler@^0.2.0":
   version "0.2.0"
