@@ -1108,10 +1108,10 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-plugin-qwik@0.14.1:
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-qwik/-/eslint-plugin-qwik-0.14.1.tgz#699b0fd9eb714e4ce0b854b775033dcac611857f"
-  integrity sha512-cxwhUgsAxRehnZBcvdT08KWjY1yjmaNHKp4U8njC9fWUEH2qBDEileWVS3QSN+hnVHADPS2BvOvWBg+0wEuIcg==
+eslint-plugin-qwik@0.16.2:
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-qwik/-/eslint-plugin-qwik-0.16.2.tgz#ee8b69e28cd4d4f1e53e9342645d0fed68a3f360"
+  integrity sha512-Jn4J8fPr7x6ghz8eAwcDpfDkOcLdZ6rN7ZEuhQc/A+gSwGnMaDbpI3/+OIEiPeXU7GElzeUPAGyiNQtFYNJCoQ==
 
 eslint-scope@^5.1.1:
   version "5.1.1"
