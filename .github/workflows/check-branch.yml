@@ -1,0 +1,50 @@
+name: Check Branch
+on:
+  push:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  target:
+    name: Target
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      only_npm_install: ${{ steps.check.outputs.only_npm_install }}
+    steps:
+      - name: check
+        id: check
+        run: echo "::set-output name=only_npm_install::${{ github.ref_name == 'main' && 'true' || 'false' }}"
+
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: target
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: volta-cli/action@v4
+
+      - uses: actions/cache@v3
+        id: npm-cache
+        with:
+          path: |
+            node_modules
+          key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      - name: Install dependencies
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm install --check-files --frozen-lockfile --non-interactive
+
+      - name: Lint
+        if: needs.target.outputs.only_npm_install != 'true'
+        run: npm run lint
+
+      - name: Build
+        if: needs.target.outputs.only_npm_install != 'true'
+        run: npm run build
