@@ -1,10 +1,12 @@
 import { $, component$, useStore, useOnWindow } from '@builder.io/qwik'
-import Bowser, { Parser } from 'bowser'
+
+import Bowser, { type Parser } from 'bowser'
+
 import { clsx } from 'clsx'
 import { Card } from './Card'
 import { CardText } from './CardText'
 
-export const TopPage = component$(() => {
+export const Page = component$(() => {
   const store = useStore<{
     userAgent?: Parser.ParsedResult
     screenSize?: { x: number; y: number }
