@@ -21,6 +21,10 @@
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
+  "dependencies": {
+    "bowser": "^2.11.0",
+    "clsx": "^1.2.1"
+  },
   "devDependencies": {
     "@builder.io/partytown": "^0.7.0",
     "@builder.io/qwik": "0.14.1",
@@ -42,11 +46,7 @@
     "wrangler": "latest"
   },
   "volta": {
-    "node": "16.18.1",
-    "yarn": "1.22.19"
-  },
-  "dependencies": {
-    "bowser": "^2.11.0",
-    "clsx": "^1.2.1"
+    "node": "20.12.0",
+    "npm": "10.5.0"
   }
 }
