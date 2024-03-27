@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     outputs:
-      only_yarn_install: ${{ steps.check.outputs.only_yarn_install }}
+      only_npm_install: ${{ steps.check.outputs.only_npm_install }}
     steps:
       - name: check
         id: check
-        run: echo "::set-output name=only_yarn_install::${{ github.ref_name == 'main' && 'true' || 'false' }}"
+        run: echo "::set-output name=only_npm_install::${{ github.ref_name == 'main' && 'true' || 'false' }}"
 
   check:
     name: Check
@@ -29,22 +29,22 @@ jobs:
       - uses: volta-cli/action@v4
 
       - uses: actions/cache@v3
-        id: yarn-cache
+        id: npm-cache
         with:
           path: |
             node_modules
-          key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-npm-
 
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn --check-files --frozen-lockfile --non-interactive
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm install --check-files --frozen-lockfile --non-interactive
 
       - name: Lint
-        if: needs.target.outputs.only_yarn_install != 'true'
-        run: yarn lint
+        if: needs.target.outputs.only_npm_install != 'true'
+        run: npm run lint
 
       - name: Build
-        if: needs.target.outputs.only_yarn_install != 'true'
-        run: yarn build
+        if: needs.target.outputs.only_npm_install != 'true'
+        run: npm run build
