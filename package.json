@@ -43,7 +43,7 @@
   },
   "volta": {
     "node": "16.18.1",
-    "yarn": "1.22.19"
+    "yarn": "1.22.22"
   },
   "dependencies": {
     "bowser": "^2.11.0",
