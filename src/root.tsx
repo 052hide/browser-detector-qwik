@@ -33,7 +33,7 @@ export default component$(() => {
             }" }`}
           />
         )}
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
         <RouterHead />
       </head>
       <body lang="en">
