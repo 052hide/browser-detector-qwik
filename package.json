@@ -36,7 +36,7 @@
     "autoprefixer": "10.4.13",
     "eslint": "8.28.0",
     "eslint-plugin-qwik": "0.14.1",
-    "node-fetch": "3.3.0",
+    "node-fetch": "3.3.2",
     "postcss": "^8.4.16",
     "prettier": "2.7.1",
     "tailwindcss": "^3.2.4",
